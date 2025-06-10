@@ -60,6 +60,7 @@ public class Rules extends JFrame implements ActionListener {
 
         setSize(800, 650);
         setLocation(350, 100);
+        setUndecorated(true);
         setLayout(null);
         setVisible(true);
 

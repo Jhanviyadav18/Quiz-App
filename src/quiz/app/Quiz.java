@@ -172,6 +172,7 @@ public class Quiz extends JFrame implements ActionListener {
         setSize(1440, 850);
         setLocation(50, 0);
         getContentPane().setBackground(Color.WHITE);
+        setUndecorated(true);
         setLayout(null);
         setVisible(true);
     }
