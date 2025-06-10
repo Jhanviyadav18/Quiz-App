@@ -8,8 +8,13 @@ import java.awt.event.ActionListener;
 public class Rules extends JFrame implements ActionListener {
     JButton start, back ;
 
-    Rules() {
-        JLabel heading = new JLabel("Welcome" + " to QUIZ TEST");
+    String name;
+
+    Rules(String name) {
+
+        this.name = name;
+
+        JLabel heading = new JLabel("Welcome" + name + " to QUIZ TEST");
         heading.setBounds(220, 100, 700, 30);
         heading.setFont(new Font(" Sans-Serif ", Font.BOLD, 28));
         heading.setForeground(new Color(22, 99, 54));
@@ -63,6 +68,8 @@ public class Rules extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == start){
+            setVisible(false);
+            new Quiz(name);
 
         }else{
             setVisible(false);
@@ -72,6 +79,6 @@ public class Rules extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args){
-        new Rules();
+        new Rules("User");
     }
 }
